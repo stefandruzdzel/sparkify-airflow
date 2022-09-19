@@ -18,6 +18,11 @@ At this time, an Airflow pipeline here is not quite necessary since there's only
 
 DAG 2: ETL Data Pipeline
 ![alt text](https://github.com/stefandruzdzel/sparkify-airflow/blob/main/ETL%20DAG.jpg?raw=true)
+1. Begin Excecution
+2. Stage data from the 2 file types (that are in S3) in Redshift tables
+3. Load the fact table
+4. Load the 4 dimension tables
+5. Run data quality checks: At this time, it just checks to make sure that data is present, and fails if not.
 
 
 ## Data

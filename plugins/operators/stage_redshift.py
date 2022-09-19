@@ -4,6 +4,7 @@ from airflow.utils.decorators import apply_defaults
 from airflow.contrib.hooks.aws_hook import AwsHook
 
 class StageToRedshiftOperator(BaseOperator):
+    """Operator for reading data from S3 and staging it in Redshift"""
     ui_color = '#358140'
     template_fields = ("s3_key",)
     copy_sql = """
@@ -37,6 +38,7 @@ class StageToRedshiftOperator(BaseOperator):
         self.extra_params = extra_params
 
     def execute(self, context):
+        """Reads data from S3 and stages it in Redshift"""
         self.log.info("Creating AWS Hook for connection to S3")
         aws_hook = AwsHook(self.aws_credentials_id)
         credentials = aws_hook.get_credentials()
