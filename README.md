@@ -17,7 +17,7 @@ This DAG is set to run just once.
 At this time, an Airflow pipeline here is not quite necessary since there's only a single step. However I opted to use Airflow because it will help the infrastructure scale as Sparkify's infrastructure becomes more complicated.
 
 DAG 2: ETL Data Pipeline
-![alt text](https://github.com/stefandruzdzel/Sparkify-ETL/blob/main/ETL DAG.jpg?raw=true)
+![alt text](https://github.com/stefandruzdzel/sparkify-airflow/blob/main/ETL%20DAG.jpg?raw=true)
 
 
 ## Data
